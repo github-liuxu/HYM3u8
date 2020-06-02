@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HYM3u8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qt6-ld-e2l">
+                                <rect key="frame" x="0.0" y="44" width="414" height="618"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kea-gT-TBb">
+                                <rect key="frame" x="20" y="705" width="78" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="87l-Nc-QuG"/>
+                                    <constraint firstAttribute="height" constant="45" id="Hlt-qZ-TdE"/>
+                                </constraints>
+                                <state key="normal" title="getcount"/>
+                                <connections>
+                                    <action selector="getCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YcC-ni-YVW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onH-P6-JPg">
+                                <rect key="frame" x="118" y="709" width="78" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="bWX-Ce-9hw"/>
+                                    <constraint firstAttribute="width" constant="78" id="gAN-rG-c2o"/>
+                                </constraints>
+                                <state key="normal" title="getInfo"/>
+                                <connections>
+                                    <action selector="getInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DhV-jd-LfV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQV-3g-sbB">
+                                <rect key="frame" x="330" y="716" width="84" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="msy-mx-bHw"/>
+                                    <constraint firstAttribute="width" constant="84" id="ovf-CK-QjZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="load:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vSD-Ga-8zq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="onH-P6-JPg" firstAttribute="top" secondItem="Qt6-ld-e2l" secondAttribute="bottom" constant="47" id="8eH-1v-K4m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qt6-ld-e2l" secondAttribute="trailing" id="G2I-0Y-RK9"/>
+                            <constraint firstItem="Qt6-ld-e2l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IVC-lY-WE4"/>
+                            <constraint firstItem="Kea-gT-TBb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="O09-5w-xkM"/>
+                            <constraint firstItem="Kea-gT-TBb" firstAttribute="top" secondItem="Qt6-ld-e2l" secondAttribute="bottom" constant="43" id="bxP-Mx-lpg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qt6-ld-e2l" secondAttribute="bottom" constant="200" id="erj-TY-KIE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JQV-3g-sbB" secondAttribute="trailing" id="mAP-eM-Lyy"/>
+                            <constraint firstItem="JQV-3g-sbB" firstAttribute="top" secondItem="Qt6-ld-e2l" secondAttribute="bottom" constant="54" id="rDJ-og-6OX"/>
+                            <constraint firstItem="onH-P6-JPg" firstAttribute="leading" secondItem="Kea-gT-TBb" secondAttribute="trailing" constant="20" id="rcd-bP-x5H"/>
+                            <constraint firstItem="Qt6-ld-e2l" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="s7V-dY-EUk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Qt6-ld-e2l" id="4q5-ed-8L4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+</document>
